@@ -1,7 +1,7 @@
 [project]
 name = "square-semantic-analytics"
 version = "0.1.0"
-description = "Perosnal project"
+description = "Personal project"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
