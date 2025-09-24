@@ -1,0 +1,21 @@
+[project]
+name = "square-semantic-analytics"
+version = "0.1.0"
+description = "Perosnal project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncpg>=0.30.0",
+    "dotenv>=0.9.9",
+    "greenlet>=3.2.4",
+    "loguru>=0.7.3",
+    "pandas>=2.3.2",
+    "pendulum>=3.1.0",
+    "pre-commit>=4.3.0",
+    "psycopg2-binary>=2.9.10",
+    "python-benedict[yaml]>=0.34.1",
+    "ruff>=0.12.10",
+    "sqlalchemy>=2.0.43",
+    "sqlmodel>=0.0.25",
+    "squareup>=43.0.2.20250820",
+]

@@ -1,0 +1,7 @@
+name: List Payments
+object_name: payments
+api_url: https://developer.squareup.com/explorer/square/payments-api/list-payments
+sort_field: "CREATED_AT"
+sort_order: "ASC"
+begin_time: "2022-11-25T00:00:00.000Z"
+limit: 100

@@ -1,0 +1,25 @@
+name: Search orders
+object_name: orders
+api_url: https://developer.squareup.com/explorer/square/orders-api/search-orders
+location_id:
+  - "LNTHXYC3W0E87"
+  - "LC3E6FJECFBW5"
+query:
+  sort: 
+    sort_field: "CREATED_AT"
+    sort_order: "ASC"
+  filter:
+    date_time_filter:
+      created_at:
+        start_at: "1999-11-25T00:00:00.000Z"
+return_entries: False
+dependencies:
+  - 'applied_discounts' 
+  - 'applied_taxes' 
+  - 'discounts'
+  - 'line_items' 
+  - 'modifiers'
+  - 'taxes'
+  - 'tenders'
+  
+limit: 1000

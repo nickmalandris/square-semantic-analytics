@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    # uv version.
+    rev: 0.8.22
+    hooks:
+      # To make sure your uv.lock file is up to date even if your pyproject.toml file was changed
+      - id: uv-lock
+        name: lock file update
+      # To keep a requirements.txt file in sync with your uv.lock file
+      - id: uv-export
+        name: export requirements.txt
+        args: ["--frozen", "--output-file=requirements-custom.txt", "--quiet"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.13.1
+    hooks:
+      # Run the linter.
+      - id: ruff-check
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
