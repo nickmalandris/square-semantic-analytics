@@ -1,6 +1,6 @@
-This is a personal prject I am using to learn / relearn a few different concepts.
+<h1>This is a personal prject I am using to learn / relearn a few different concepts.</h1>
 
-I am looking to ingest data from an api, in this instance I am using the POS system [Square]['https://developer.squareup.com/reference/square]. 
+I am looking to ingest data from an api, in this instance I am using the POS system [Square](https://developer.squareup.com/reference/square). 
 The main frameworks or packages I am using are:
 - Square Python SDK
 - Pydanitc
@@ -33,12 +33,12 @@ Key things I've been learning and exporing:
 
 Architecture flow:
 
-    Check cursor table if any cursur values exists
-    Update the base query params if cursor value exists
-    Concurrently make request to each of the API endpoints
-    Pass the result to each of the processors where data will be validated and written to the db
-    Write the cursor to table in db
-    Repeat until there is no more cursors returned from the endpoint
+1. Check cursor table if any cursur values exists
+2. Update the base query params if cursor value exists
+3. Concurrently make request to each of the API endpoints
+4. Pass the result to each of the processors where data will be validated and written to the db
+5. Write the cursor to table in db
+6. Repeat until there is no more cursors returned from the endpoint
 
 Based on the square api documentation, each result will be paginated for things like payments or orders so keeping track of the cursor will be a way for me to checkpoint where I am up to for writing data into the database. I will only update the cursor values if the result has been successfully written to the db.
 
